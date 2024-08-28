@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Pixelify_Sans';
+    src: url('PixelifySans-VariableFont_wght.ttf') format('truetype');
+}
+
+h1 {
+
+    font-size: 80px;
+    text-shadow: 4px 4px #6495ED;
+}
+
+body {
+    font-family: Pixelify_Sans;
+    color: #FFFAF0;
+    margin: 50px;
+    background-color: black;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+input[type="number"] {
+    font-family: Pixelify_Sans;
+    padding: 10px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    display: block;
+    border-radius: 12px; /* Promień zaokrąglenia */
+    border-width: 4px; /* Ustawia grubość obramowania na 4px */
+    border-style: solid; /* Styl obramowania */
+    border-color: #FFFAF0;
+    background-color: #2F4F4F;
+    color: #FFFAF0
+}
+
+
+input[type="submit"] {
+    font-family: Pixelify_Sans;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 12px; /* Promień zaokrąglenia */
+    border-width: 2px; /* Ustawia grubość obramowania na 4px */
+    border-style: solid; /* Styl obramowania */
+    background-color: #6495ED;
+    color: white; /* Kolor tekstu */
+    border: line; /* Usunięcie obramowania */
+    border-color: #FFFAF0;
+    transition: all, 0.5s ease-in-out;
+    width: 60px;
+    text-align: center;
+    
+}
+
+input[type="submit"]:hover {
+    background-color: #6495ED;
+    transform: scale(1.05); /* Powiększenie przycisku */
+    filter: brightness(140%);
+}
+
+.number-list {
+    margin-top: 20px;
+}
+
+.number-item {
+    margin: 5px 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+form[method="POST"] {
+    align-items: center;
+}
+
+.POST1 {
+    justify-content: center; /* Centrowanie poziome */
+    align-items: center;      /* Centrowanie pionowe */
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Input</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Enter a Number:</h1>
+    <form method="POST" class="POST1">
+         <input type="number" name="number" id="numberInput" oninput="limitDigits(this)" required>
+         <input type="submit" value="OK">
+    </form>
+    <div class="number-list">
+        <h2>Entered Numbers:</h2>
+        {% for number in numbers %}
+           <div class="number-item">{{ number.number }}</div>
+        {% endfor %}
+    </div>
+  </div>
+
+
+    <script>
+        function limitDigits(element) {
+            if (element.value.length > 6) {
+                element.value = element.value.slice(0, 6); // Obcina wartość do 6 cyfr
+            }
+        }
+    </script>
+
+</body>
+</html>
+

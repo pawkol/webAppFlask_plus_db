@@ -1,0 +1,24 @@
+services:
+  flask-app:
+    build: ./app
+    ports:
+      - "9999:8080"  # Zmiana portu
+    environment:
+      - DB_HOST=mysql-db
+      - DB_USER=root
+      - DB_PASSWORD=password
+      - DB_NAME=numbers_db
+    depends_on:
+      - mysql-db
+
+  mysql-db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: numbers_db
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
+
