@@ -5,7 +5,7 @@ import time
 
 app = Flask(__name__)
 
-# Funkcja nawiązywania połączenia z bazą danych
+# DataBase connection function
 def get_db_connection():
     retries = 5
     while retries > 0:
@@ -23,7 +23,7 @@ def get_db_connection():
             time.sleep(5)
     raise Exception("Could not connect to the database.")
 
-# Funkcja inicjalizująca bazę danych
+# database initialisation
 def init_db():
     conn = get_db_connection()
     cursor = conn.cursor()
